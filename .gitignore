@@ -2,3 +2,6 @@
 composer.phar
 tests/log
 vendor
+
+my-clover.xml
+my-diff.patch

@@ -32,6 +32,16 @@
 			"PHPCodeCoverageVerifier\\": "src/PHPCodeCoverageVerifier"
 		}
 	},
+	"scripts": {
+		"make_git_diff": "scripts/composer/make_verifier_files.sh || true",
+		"verifier": "scripts/composer/php_code_coverage_verifier.sh || true",
+		"rm_unit_test_files": "scripts/composer/rm_unit_test_file.sh || true",
+		"unit_test": [
+			"@composer install",
+			"@make_git_diff",
+			"@verifier"
+		]
+	},
 	"bin": [
 		"bin/php-code-coverage-verifier"
 	]
